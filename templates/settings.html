@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>設定</h2>
+
+<form method="post">
+    <label class="form-label">OpenWeather APIキー</label>
+    <input class="form-control mb-2" name="api_key" value="{{ api_key or '' }}" required>
+    <button class="btn btn-success">保存</button>
+</form>
+
+{% endblock %}
