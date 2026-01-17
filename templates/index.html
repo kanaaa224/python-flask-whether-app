@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>天気情報取得</h2>
+
+<form method="post" class="mb-4">
+    <input class="form-control mb-2" name="city" placeholder="都市名（例：Tokyo）" required>
+    <button class="btn btn-primary">取得</button>
+</form>
+
+{% if weather %}
+<div class="card">
+    <div class="card-body">
+        <h4>{{ weather.city }}</h4>
+        <p>気温：{{ weather.temp }} ℃</p>
+        <p>天気：{{ weather.desc }}</p>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}
